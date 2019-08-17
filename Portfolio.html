@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="css/Portfolio.css" types="text/css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT</a>
+            <a class="c" href="#">SKILL</a>
+            <a class="d" href="#">PROJECT</a>
+            <a class="e" href="#">CONTACT</a>
+        </div>
+        <div class="content">
+            <div class="home">
+                <h1>I am Sazzadul Alam Sajib</h1>
+                <h3>Software Engineer</h3>
+            </div>
+            <div class="aboutme">
+                    <img class="myimage" src="images/myimage.jpg" alt="Italian Trulli">
+                <p>Hello Everyone,<br>
+                    Welcome, I am trying to create webpage for myself and if you have any
+                    suggestion you can contact me to my gmail thank you.<br>
+                    Email:sazzadul35-217@diu.edu.bd
+                </p>
+            </div>
+            <div class="skillworld">
+                <h1>My Skills</h1>
+                <p>HTML</p>
+                <div class="skillcontent">
+                    <div class="skills html">70%</div>
+                </div>
+                <p>CSS</p>
+                <div class="skillcontent">
+                    <div class="skills css">60%</div>
+                </div>
+
+                <p>JAVASCRIPT</p>
+                <div class="skillcontent">
+                    <div class="skills js">10%</div>
+                </div>
+
+                <p>PHP</p>
+                <div class="skillcontent">
+                    <div class="skills php">50%</div>
+                </div>
+
+                <p>C LANGUAGE</p>
+                <div class="skillcontent">
+                    <div class="skills clanguage">20%</div>
+                </div>
+
+                <p>JAVA LANGUAGE</p>
+                <div class="skillcontent">
+                    <div class="skills java">30%</div>
+                </div>
+            </div>
+            <div class="projectdone">
+                <img class="sudoku" src="images/sudoku.jpg" alt="Italian Trulli">
+                <p>Sudoku Game with C</p>
+                <img class="library" src="images/library.jpg" alt="Italian Trulli">
+                <p>Library Management System with Java </p>
+            </div>
+            <div class="contactme">
+                <div class="contactform">
+                    <form action="" methods="post">
+                        <input type="text" name="" class="inputtext" value="First Name">
+                        <input type="text" name="" class="inputtext" value="Last Name">
+                        <input type="text" name="" class="inputtext" value="Your Email">
+                        <textarea cols="4" rows="6" class="inputmessage">Your Massages.....!!!</textarea>
+                        <input type="button" name="" class="submitbutton" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a').click(function () {
+                //alert("i am an absolute idiot and thank you for clicking for proving that by the way page is crashed");
+                var selected = $(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+            });
+
+            var $a = $('.a'),
+                $b = $('.b'),
+                $c = $('.c'),
+                $d = $('.d'),
+                $e = $('.e'),
+                $home = $('.home'),
+                $aboutme = $('.aboutme');
+            $skillworld = $('.skillworld');
+            $projectdone = $('.projectdone');
+            $contactme = $('.contactme');
+
+            $a.click(function () {
+                $home.fadeIn();
+                $aboutme.fadeOut();
+                $skillworld.fadeOut();
+                $contactme.fadeOut();
+                $projectdone.fadeOut();
+
+            });
+            $b.click(function () {
+                $home.fadeOut();
+                $aboutme.fadeIn();
+                $skillworld.fadeOut();
+                $contactme.fadeOut();
+                $projectdone.fadeOut();
+            });
+            $c.click(function () {
+                $home.fadeOut();
+                $aboutme.fadeOut();
+                $skillworld.fadeIn();
+                $projectdone.fadeOut();
+                $contactme.fadeOut();
+            });
+            $d.click(function () {
+                $home.fadeOut();
+                $aboutme.fadeOut();
+                $skillworld.fadeOut();
+                $projectdone.fadeIn();
+                $contactme.fadeOut();
+            });
+            $e.click(function () {
+                $home.fadeOut();
+                $aboutme.fadeOut();
+                $skillworld.fadeOut();
+                $projectdone.fadeOut();
+                $contactme.fadeIn();
+            });
+        });
+    </script>
+</body>
+
+</html>
